@@ -1,23 +1,22 @@
-.wrapper,
-.row {
+.wrapper, .row {
   *zoom: 1; }
-  .wrapper:before,
-  .row:before, .wrapper:after,
-  .row:after {
+  .wrapper:before, .row:before, .wrapper:after, .row:after {
     content: " ";
     display: table; }
-  .wrapper:after,
-  .row:after {
+  .wrapper:after, .row:after {
     clear: both; }
 
-*,
-*:after,
-*:before {
+*, *:after, *:before {
   margin: 0;
   padding: 0;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box; }
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto !important; }
 
 .wrapper {
   width: 100%;
@@ -27,16 +26,43 @@
   float: left;
   padding: 1em;
   width: 100%;
-  min-height: 1px; }
-
-* {
-  color: #363742; }
+  min-height: 1px;
+  margin: 10px; }
 
 span {
+  background-color: blue;
+  width: 100%;
+  display: block; }
+
+.mint {
+  background-color: #d9f5e8; }
+
+.teal {
+  background-color: #37cbc2; }
+
+.gold {
+  background-color: #ffbb33; }
+
+.tomato {
+  background-color: tomato; }
+
+.color-1 {
+  background-color: #9ee5c4;
   display: block;
-  background: #ffb283;
-  padding: 2em;
-  text-align: center; }
+  width: 100%;
+  margin: 0px; }
+
+.color-2 {
+  background-color: #62d59f;
+  display: block;
+  width: 100%;
+  margin: 0px; }
+
+.color-3 {
+  background-color: #31b97a;
+  display: block;
+  width: 100%;
+  margin: 0px; }
 
 @media only screen and (min-width: 30em) {
   .wrapper {
@@ -44,39 +70,39 @@ span {
     max-width: 65em; }
 
   .column-1 {
-    width: 8.33333%; }
+    width: 7.5%; }
 
   .column-2 {
-    width: 16.66667%; }
+    width: 15%; }
 
   .column-3 {
-    width: 25%; }
+    width: 22.5%; }
 
   .column-4 {
-    width: 33.33333%; }
+    width: 30%; }
 
   .column-5 {
-    width: 41.66667%; }
+    width: 37.5%; }
 
   .column-6 {
-    width: 50%; }
+    width: 45%; }
 
   .column-7 {
-    width: 58.33333%; }
+    width: 52.5%; }
 
   .column-8 {
-    width: 66.66667%; }
+    width: 60%; }
 
   .column-9 {
-    width: 75%; }
+    width: 67.5%; }
 
   .column-10 {
-    width: 83.33333%; }
+    width: 75%; }
 
   .column-11 {
-    width: 91.66667%; }
+    width: 82.5%; }
 
   .column-12 {
-    width: 100%; } }
+    width: 90%; } }
 
 /*# sourceMappingURL=grid.css.map */

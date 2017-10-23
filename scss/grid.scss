@@ -1,53 +1,84 @@
 @import "variables";
 @import "mixins";
 
-*,
-*:after,
-*:before {
+*, *:after, *:before {
     margin: 0;
     padding: 0;
-
     @include border-box;
     }
 
-.wrapper {
-  width: 100%;
-  margin: 0 auto;
-}
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto !important;
+    }
 
-.wrapper,
-.row {
-  @extend %clearfix;
-}
+.wrapper {
+    width: 100%;
+    margin: 0 auto;
+    }
+
+.wrapper, .row {
+    @extend %clearfix;
+    }
 
 [class*='column-'] {
-  float: left;
-  padding: 1em;
-  width: 100%;
-  min-height: 1px;
-}
-
-* {
-  color: #363742; }
-
-span {
-  display: block;
-  background: #c2f0ff;
-  padding: 2em;
-  text-align: center; }
-
-
-  @media #{$breakpoint-medium} {
-    .wrapper {
-      width: 95%;
-      max-width: $grid-max-width;
+    float: left;
+    padding: 1em;
+    width: 100%;
+    min-height: 1px;
+    margin: 10px;
     }
 
-    @for $i from 1 through 12 {
+  span {
+    background-color: blue;
+    width: 100%;
+    display: block;
+  }
 
-      .column-#{$i} {
-        width: 100% / $grid-column * $i;
-      }
-    }
+  .tiny {
 
   }
+
+
+
+.mint {
+  // background-color: rgba(217, 245, 232, 1);
+  @include backgroundcolor(rgba(217, 245, 232, 1));
+}
+
+.teal {
+  background-color: rgba(55, 203, 194, 1);
+}
+
+.gold {
+  background-color: rgba(255, 187, 51, 1);
+}
+
+.tomato {
+  background-color: rgba(255,99,71,1);
+}
+
+// @mixin tinycolor {
+//
+// }
+@for $i from 1 through 3 {
+    .color-#{$i} {
+        background-color: darken(hsl(152, 58%, 91%), $i * 15%);
+        display: block;
+        width: 100%;
+        margin: 0px;
+        }
+    }
+
+@media #{$breakpoint-medium} {
+    .wrapper {
+        width: 95%;
+        max-width: $grid-max-width;
+        }
+    @for $i from 1 through $grid-columns {
+        .column-#{$i} {
+            width: 90% / $grid-columns * $i;
+            }
+        }
+    }
